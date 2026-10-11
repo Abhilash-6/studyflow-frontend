@@ -1,0 +1,361 @@
+
+/* Fix Academic Planner layout and styling */
+
+.planner {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 28px;
+  background: #f6f7fb;
+  color: #20263a;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.planner h1,
+.planner h2,
+.planner h3,
+.planner p {
+  text-align: left;
+}
+
+.planner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.planner-header h1 {
+  font-size: 30px;
+  margin: 8px 0;
+}
+
+.planner-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.planner-stat {
+  padding: 22px;
+  border: 1px solid #e7e9f2;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.planner-stat span,
+.planner-stat small {
+  display: block;
+  color: #747b8e;
+}
+
+.planner-stat strong {
+  display: block;
+  margin: 12px 0 6px;
+  font-size: 30px;
+}
+
+.planner-progress {
+  margin-bottom: 24px;
+  padding: 22px 25px;
+  border: 1px solid #e7e9f2;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.planner-progress-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.planner-progress-heading h2,
+.planner-panel h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.planner-progress-heading strong {
+  color: #6558d3;
+  font-size: 26px;
+}
+
+.planner-progress-track {
+  height: 10px;
+  margin-top: 18px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #eeedf8;
+}
+
+.planner-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #6558d3;
+}
+
+.planner-panel {
+  min-width: 0;
+  padding: 23px;
+  border: 1px solid #e7e9f2;
+  border-radius: 14px;
+  background: #fff;
+  text-align: left;
+}
+
+.planner-columns {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.5fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.planner-calendar-panel {
+  margin-bottom: 24px;
+}
+
+.planner-calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.planner-calendar-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.planner-calendar-nav {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #e1e4ed;
+  border-radius: 9px;
+  background: #fff;
+  color: #6558d3;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.planner-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.planner-calendar-weekday {
+  padding: 9px 2px;
+  color: #858b9c;
+  font-weight: 700;
+  text-align: center;
+}
+
+.planner-calendar-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  min-height: 78px;
+  padding: 9px;
+  border: 1px solid #e7e9f2;
+  border-radius: 9px;
+  background: #fff;
+  color: #30364b;
+  text-align: left;
+  cursor: pointer;
+}
+
+.planner-calendar-cell:hover {
+  border-color: #a59bf1;
+  background: #faf9ff;
+}
+
+.planner-calendar-cell.empty {
+  border-color: transparent;
+  background: transparent;
+  cursor: default;
+}
+
+.planner-calendar-cell.selected {
+  border: 2px solid #6558d3;
+  padding: 8px;
+  background: #f1efff;
+}
+
+.planner-calendar-cell.today .planner-calendar-day {
+  color: #6558d3;
+  font-weight: 800;
+}
+
+.planner-calendar-dots {
+  display: flex;
+  gap: 4px;
+  margin-top: 9px;
+}
+
+.planner-calendar-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #6558d3;
+}
+
+.planner-calendar-dot.completed {
+  background: #269768;
+}
+
+.planner-calendar-count {
+  margin-top: 5px;
+  color: #777e91;
+  font-size: 10px;
+}
+
+.planner-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 22px;
+}
+
+.planner-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.planner input,
+.planner select {
+  width: 100%;
+  min-width: 0;
+  min-height: 42px;
+  padding: 11px 12px;
+  border: 1px solid #dfe2ec;
+  border-radius: 8px;
+  background: #fff;
+  color: #30364b;
+  font: inherit;
+}
+
+.planner-add-button {
+  padding: 13px;
+  border: 0;
+  border-radius: 9px;
+  background: #6558d3;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.planner-task-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.planner-task {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.planner-task-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.planner-task-info h3 {
+  margin: 0 0 6px;
+  font-size: 14px;
+}
+
+.planner-task-info p {
+  margin: 0 0 8px;
+  color: #858b9c;
+  font-size: 12px;
+}
+
+.planner-check {
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  border: 1px solid #cfd3e0;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+
+.planner-check.is-complete {
+  background: #6558d3;
+  color: white;
+}
+
+.planner-delete {
+  border: 0;
+  background: transparent;
+  color: #c34d56;
+  cursor: pointer;
+}
+
+.planner-empty {
+  padding: 22px 0;
+  color: #858b9c;
+  text-align: center;
+}
+
+.planner-upcoming {
+  margin-top: 24px;
+}
+
+@media (max-width: 1000px) {
+  .planner-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .planner-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .planner {
+    padding: 15px;
+  }
+
+  .planner-stats {
+    gap: 10px;
+  }
+
+  .planner-stat,
+  .planner-panel,
+  .planner-progress {
+    padding: 14px;
+  }
+
+  .planner-calendar-grid {
+    gap: 4px;
+  }
+
+  .planner-calendar-cell {
+    min-height: 52px;
+    padding: 5px;
+  }
+
+  .planner-calendar-cell.selected {
+    padding: 4px;
+  }
+
+  .planner-calendar-count {
+    display: none;
+  }
+}
