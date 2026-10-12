@@ -23,19 +23,16 @@ async function request(url, options = {}) {
 
 export const taskService = {
   getAll: () => request(API_URL),
-
   create: (task) =>
     request(API_URL, {
       method: "POST",
       body: JSON.stringify(task),
     }),
-
   update: (id, task) =>
     request(`${API_URL}/${id}`, {
       method: "PUT",
       body: JSON.stringify(task),
     }),
-
   delete: (id) =>
     request(`${API_URL}/${id}`, {
       method: "DELETE",
